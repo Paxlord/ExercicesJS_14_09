@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <title>Exercice 1</title>
+    </head>
+    <body id="mainBody">
+        
+        <form name="form">
+            Nom: <input type="text" name="surname">
+            Prénom: <input type="text" name="name">
+            Addresse: <input type="text" name="address">
+            Email : <input type="text" name="email">
+            Password: <input type="text" name="password">
+            <input type="submit" value="Submit">
+        </form>
+
+        <ul>
+            <li class="doNotDisplay" id="surnameError">Nom pas valide</li>
+            <li class="doNotDisplay" id="nameError">Prenom pas valide</li>
+            <li class="doNotDisplay" id="addressError">Addresse non valide</li>
+            <li class="doNotDisplay" id="emailError">Email non valide</li>
+            <li class="doNotDisplay" id="passwordError">Password non valide</li>
+        </ul>
+
+        <script src="./index.js"></script>
+    </body>
+</html>
