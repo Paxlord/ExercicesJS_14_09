@@ -22,7 +22,6 @@ Ce programme fonctionne en créant un objet de type draw_bar et en l'initialisan
 
 ### Fonctionnement : 
 
-L'exercice Morpion est l'exercice le plus complexe de l'évaluation :
 Pour son fonctionnement tout se passe dans la classe MorpionXO, la classe morpion possède tous les attributs qui permettent de jouer au jeu.
 
 #### Méthode Initialize
