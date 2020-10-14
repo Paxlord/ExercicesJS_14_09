@@ -1,5 +1,6 @@
 
 /**
+ * Function
  * Fonction qui retourne un integer aléatoire entre un minimum et un maximum
  * @param {number} min
  * @param {number} max
@@ -12,6 +13,7 @@ function getRandomInteger(min , max){
 }
 
 /**
+ * Function
  * Fonction qui génère une table html de taille spécifié et qui attribue à chaque Cellule une couleur différente
  * @param {number} xAxis
  * @param {number} yAxis
