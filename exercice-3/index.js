@@ -1,3 +1,10 @@
+
+
+/**
+ * Object
+ * Représente un jeu de Morpion
+ * @constructor
+ */
 function MorpionXO(){
 
     this.player_1 = new Player(1,"X");
@@ -17,6 +24,14 @@ function MorpionXO(){
 
 }
 
+
+/**
+ * Object
+ * Représente un joueur
+ * @constructor
+ * @param {number} id
+ * @param {string} char
+ */
 function Player(id, char){
 
     this.id = id;
@@ -25,6 +40,14 @@ function Player(id, char){
 
 }
 
+/**
+ * Object
+ * Représente une cellule du morpion
+ * @param {number} x
+ * @param {number} y
+ * @param {string} state
+ * @returns {any}
+ */
 function Cell(x, y, state){
 
     this.x = x;
@@ -33,11 +56,20 @@ function Cell(x, y, state){
 
 }
 
+/**
+ * Object
+ * Représente une ligne de la grille
+ */
 function Lines(){
     this.numberOfPlayer1Char = 0;
     this.numberOfPlayer2Char = 0;
 }
 
+
+/**
+ * Method
+ * Initialise l'état initial d'une grille de morpion
+ */
 MorpionXO.prototype.Initialize = function(){
 
     var cells = [];
@@ -71,7 +103,10 @@ MorpionXO.prototype.Initialize = function(){
 }
 
 
-//Fonction qui s'occupe d'afficher le tableau en fonction des cells
+/**
+ * Method
+ * Méthode qui s'occupe de dessiner la grille dans la DOM
+ */
 MorpionXO.prototype.Draw = function(){
 
     //On vide l'element parent du tableau précédant à chaque appel
@@ -112,6 +147,11 @@ MorpionXO.prototype.Draw = function(){
 
 }
 
+/**
+ * Method
+ * Méthode qui s'occupe de mettre à jour l'état du jeu en fonction de la case cliqué
+ * @param {Event} evt
+ */
 MorpionXO.prototype.Update = function(evt){
     
     var currentClickedIndex = parseInt(evt.currentTarget.index);
@@ -142,6 +182,12 @@ MorpionXO.prototype.Update = function(evt){
 
 }
 
+/**
+ * Method
+ * Méthode qui s'occupe de compter le nombre de case occupé par chaque joueur
+ * @param {number} xPos
+ * @param {number} yPos
+ */
 MorpionXO.prototype.CountPlaced = function(xPos, yPos){
 
     if(this.currentPlayer.id === this.player_1.id){
@@ -171,6 +217,12 @@ MorpionXO.prototype.CountPlaced = function(xPos, yPos){
 
 }
 
+/**
+ * Method
+ * Méthode qui s'occupe de regarder si un joueur à gagné une manche de morpion
+ * @param {number} x
+ * @param {number} y
+ */
 MorpionXO.prototype.CheckForWinner = function(x ,y){
 
     if(this.filledCell === this.sizeX * this.sizeY){
@@ -200,6 +252,12 @@ MorpionXO.prototype.CheckForWinner = function(x ,y){
 
 }
 
+/**
+ * Méthod
+ * Méthode qui s'occupe de gérer si un joueur à gagné la partie ou la manche
+ * @param {Player} winningPlayer
+ * @returns {any}
+ */
 MorpionXO.prototype.WinRoutine = function(winningPlayer){
 
     winningPlayer.points ++;
@@ -219,6 +277,13 @@ MorpionXO.prototype.WinRoutine = function(winningPlayer){
 
 var morpion = new MorpionXO();
 
+
+
+/**
+ * Function
+ * fonction qui est executé lors d'un click cellule
+ * @param {Event} evt
+ */
 function HandleClick(evt){
     morpion.Update(evt);
 }

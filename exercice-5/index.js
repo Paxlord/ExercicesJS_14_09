@@ -5,6 +5,11 @@ var regexPassword = /([a-zA-Z1-9]){8,}/
 
 
 
+/**
+ * Function
+ * fonction qui s'occupe de valider le formulaire à l'aide des regexs définis plus haut
+ * @param {Event} evt
+ */
 function validateForm(evt){
 
     evt.preventDefault();

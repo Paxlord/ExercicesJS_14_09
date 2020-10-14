@@ -1,9 +1,21 @@
+
+/**
+ * Fonction qui retourne un integer aléatoire entre un minimum et un maximum
+ * @param {number} min
+ * @param {number} max
+ * @returns {number}
+ */
 function getRandomInteger(min , max){
 
     return Math.floor(Math.random() * (max - min) + min);
 
 }
 
+/**
+ * Fonction qui génère une table html de taille spécifié et qui attribue à chaque Cellule une couleur différente
+ * @param {number} xAxis
+ * @param {number} yAxis
+ */
 function gridGenerator(xAxis, yAxis){
 
     var body = document.getElementById("mainBody");

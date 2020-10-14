@@ -1,3 +1,10 @@
+/**
+ * Function
+ * fonction qui s'occupe de générer une moyenne à partir d'un tableau de nombres
+ * @date 2020-10-14
+ * @param {number[]} array
+ * @returns {number}
+ */
 function ComputeNote(array){
 
     var res = 0;

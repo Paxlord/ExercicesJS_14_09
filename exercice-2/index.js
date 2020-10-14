@@ -1,3 +1,10 @@
+/**
+ * Object
+ * représente une barre de chargement
+ * @constructor
+ * @param {number} sum
+ * @param {number} nbr
+ */
 function drawBar(sum, nbr){
 
     this.sum = sum;
@@ -20,7 +27,11 @@ function drawBar(sum, nbr){
 
 }
 
-drawBar.prototype.Draw_Bar = function(){
+/**
+ * Method
+ * Méthode qui s'occupe d'attribuer les tailles au parties de la barre
+ */
+drawBar.prototype.Set_Size = function(){
 
     if(this.nbr > this.sum){
         this.nbr = 100;
@@ -38,30 +49,22 @@ drawBar.prototype.Draw_Bar = function(){
 
 }
 
+
+
+/**
+ * Method
+ * Méthode qui s'occupe d'ajouter la barre de chargement à la DOM
+ * @param {HTMLAnchorElement} parentElement
+ */
 drawBar.prototype.Initialize_Bar = function(parentElement){
 
-    this.Draw_Bar();
+    this.Set_Size();
 
     parentElement.appendChild(this.non_colored_part);
     parentElement.appendChild(this.colored_part);
 }
 
-drawBar.prototype.Update_nbr = function(nbr){
-
-    this.nbr = nbr;
-
-}
-
 var loading = new drawBar(100, 95);
 var body = document.getElementById("loadingContainer");
 loading.Initialize_Bar(body);
-
-var slider = document.getElementById("mainSlider");
-
-slider.onchange = function(){
-
-    loading.Update_nbr(this.value);
-    loading.Draw_Bar();
-
-}
 

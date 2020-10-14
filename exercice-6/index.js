@@ -1,3 +1,9 @@
+/**
+ * Function
+ * fonction qui s'occupe de validé la validité d'un numéro de téléphone donné
+ * @param {string} phoneNumber
+ * @returns {boolean}
+ */
 function CheckPhoneNumber(phoneNumber){
 
     var regexPhoneNumber = /^0[761]([0-9]{2}){4}$/

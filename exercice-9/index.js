@@ -1,3 +1,9 @@
+/**
+ * Function
+ * fonction qui s'occupe de validé si une string passé en paramètre est un palindrome ou non
+ * @date 2020-10-14
+ * @param {string} str
+ */
 function CheckPalindrome(str){
 
     var cleanedUpString = "";
