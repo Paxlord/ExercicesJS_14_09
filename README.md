@@ -65,4 +65,45 @@ On attache à notre élément form un eventListener sur submit. Lorsqu'un submit
 2. regexAddresse doit être une série qui commence par un nombre et qui est suivie d'au moins deux mots
 3. regexEmail doit être une chaine qui correspond à "aaaaaa@aaa.aaa"
 
-...
+## Exercice 6 : Validation du formulaire
+
+### Fonctionnement : 
+
+Simple fonction qui s'occupe de valider si un numéro de télephone est valide ou non. Le regex regarde si : le numéro commence bien par 0 suivi de 1,7,6 puis qu'il est bien suivi par une suite 4 nombres composés de 2 chiffres chacun.
+
+## Exercice 7 : Calcul de moyenne
+
+### Fonctionnement : 
+
+Simple fonction qui calcule une moyenne à partir d'un tableau de nombres donné en paramètre.
+
+## Exercice 8 : Bataille navale
+
+### Fonctionnement : 
+
+La bataille navale est constitué de plusieurs fontions pour jouer au jeu. La classe Bateau est une classe qui permet d'assigner une taille de bateau à un nom de bateau. à noter que le jeu ne supporte pas plusieurs bateau de la même taille sur un même plateau. 
+
+#### Fonction GetNameFromTailleList
+
+Cette fonction retourne le nom d'un bateau dans une liste en fonction de la taille donnée en paramètre. 
+
+#### Fonction CheckIfAllBoatSank, CheckIfOneBoatSank
+
+Ces deux fonctions parcourent le plateau de jeu et retourne si un bateau en particulier à coulé ou si tous les bateaus ont coulés.
+
+#### Fonction DrawBoard
+
+Cette fonction s'occupe de générer la table html et de l'ajouter à la DOM. Ainsi que d'ajouter à chaque cellule un Eventlistener sur le clic de la souris.
+
+
+#### Fonction HandleClick
+
+Cette fonction s'occupe de gérer l'état du jeu. Pour chaque clic sur une cellule on teste les conditions vue plus haut et affiche un message.
+
+## Exercice 9 : Palindrome
+
+### Fonctionnement : 
+
+Comme l'exercice imposait uniquement des boucles et aucune fonctions en intégré en javascript, ce programme est plutot limité. Il faut rentrer une phrase sans catactères spéciaux et sans majuscule. L'utilisation de string.charAt() et des regex permettrait de rendre la fonction plus flexible.
+
+
